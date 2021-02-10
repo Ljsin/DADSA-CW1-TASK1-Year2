@@ -140,7 +140,7 @@ print('\n')"""
 #print(input("Press [ENTER] to view HOUSE SHOPPING SCHEDULE FOR WEEK 1 AND 2..."))
 #############################################################################
 
-#FUNCTION: houses_in_weeks
+#FUNCTION: read_house_data
 #PARAM: NONE
 #DESC: Reads house data printing each household number and items for sp
 #RETURNS: list of houses and items 
