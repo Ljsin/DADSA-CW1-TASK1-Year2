@@ -1,5 +1,5 @@
 #FILE: Task1.py 
-#DATE LAST MODIFIED: 08/02/2021
+#DATE LAST MODIFIED: 10/02/2021
 #------------------------------------------
 
 #STUDENT NAME: Lloyd Wood
@@ -262,27 +262,27 @@ def delivery_scheduleW1():
 
     for columns in house_orders:
         if(houses_W1 and columns != 'Products'):
-               MAX_FROM_SHOP_A = MAX_FROM_SHOP_A + house_shop_list[columns][0]
-               MAX_FROM_SHOP_B = MAX_FROM_SHOP_B + house_shop_list[columns][1]
-               MAX_FROM_SHOP_C = MAX_FROM_SHOP_C + house_shop_list[columns][2]
+               MAX_FROM_SHOP_A = MAX_FROM_SHOP_A + f"{house_shop_list[columns][0]}"
+               MAX_FROM_SHOP_B = MAX_FROM_SHOP_B + f"{house_shop_list[columns][1]}"
+               MAX_FROM_SHOP_C = MAX_FROM_SHOP_C + f"{house_shop_list[columns][2]}"
     for columns in houses_W1:
         SHOP_A = house_shop_list[0]
         SHOP_B = house_shop_list[1]
         SHOP_C = house_shop_list[2]
         if(SHOP_A > SHOP_B and SHOP_A > SHOP_C):
-            print(f"DELIVERY DAY FOR HOUSE {columns[0:]}: "  f"{days[0]} : [SHOP A PRODUCTS]")
+            print(f"DELIVERY DAY FOR HOUSE {columns[0:]}: " f"{days[0]}: [SHOP A PRODUCTS]")
             if(SHOP_B > SHOP_C):
                 if(SHOP_C == 0):
-                    print(days[1] + "[SHOP B PRODUCTS]")
-                else: print(days[1] + "[SHOP B PRODUCTS]")
+                    print(f"{days[1]}: [SHOP B PRODUCTS]")
+                else: print(f"{days[1]}: [SHOP B PRODUCTS]")
         if(SHOP_B > SHOP_A and SHOP_B > SHOP_C):
-            print(f" DELIVERY DAY FOR HOUSE {columns[0:]}: " f"{days[0]} : [SHOP B PRODUCTS]")
+            print(f"DELIVERY DAY FOR HOUSE {columns[0:]}: " f"{days[0]}: [SHOP B PRODUCTS]")
             if(SHOP_A > SHOP_C):
                 if(SHOP_C == 0):
                     print(f"{days[1]}: [SHOP A PRODUCTS]")
                 else: print(f"{days[1]}: [SHOP A PRODUCTS]")
         if(SHOP_C > SHOP_A and SHOP_C > SHOP_B):
-            print(f"DELIVERY DAY FOR HOUSE {columns[0:]}: " f"{days[0]} : [SHOP A PRODUCTS]")
+            print(f"DELIVERY DAY FOR HOUSE {columns[0:]}: " f"{days[0]}: [SHOP A PRODUCTS]")
             if(SHOP_A > SHOP_B):
                 if(SHOP_B == 0):
                     print(f"{days[1]}: [SHOP A PRODUCTS]")
@@ -314,27 +314,27 @@ def delivery_scheduleW2():
     MAX_FROM_SHOP_C = 0
     for columns in house_orders:
         if(houses_W2 and columns != 'Products'):
-               MAX_FROM_SHOP_A = MAX_FROM_SHOP_A + house_shop_list[columns][0]
-               MAX_FROM_SHOP_B = MAX_FROM_SHOP_B + house_shop_list[columns][1]
-               MAX_FROM_SHOP_C = MAX_FROM_SHOP_C + house_shop_list[columns][2]
+               MAX_FROM_SHOP_A = MAX_FROM_SHOP_A + f"{house_shop_list[columns][0]}"
+               MAX_FROM_SHOP_B = MAX_FROM_SHOP_B + f"{house_shop_list[columns][1]}"
+               MAX_FROM_SHOP_C = MAX_FROM_SHOP_C + f"{house_shop_list[columns][2]}"
     for columns in houses_W2:
         SHOP_A = house_shop_list[0]
         SHOP_B = house_shop_list[1]
         SHOP_C = house_shop_list[2]
         if(SHOP_A > SHOP_B and SHOP_A > SHOP_C):
-            print(f"DELIVERY DAY FOR HOUSE {columns[0:]}: " f"{days[0]} : [SHOP A PRODUCTS]")
+            print(f"DELIVERY DAY FOR HOUSE {columns[0:]}: " f"{days[0]}: [SHOP A PRODUCTS]")
             if(SHOP_B > SHOP_C):
                 if(SHOP_C == 0):
-                    print(days[1] + ": [SHOP B PRODUCTS]")
-                else: print(days[1] + ": [SHOP C PRODUCTS]")
+                    print(f"{days[1]}: [SHOP B PRODUCTS]")
+                else: print(f"{days[1]}: [SHOP C PRODUCTS]")
         if(SHOP_B > SHOP_A and SHOP_B > SHOP_C):
-            print(f"DELIVERY DAY FOR HOUSE {columns[0:]}: " f"{days[0]} : [SHOP B PRODUCTS]")
+            print(f"DELIVERY DAY FOR HOUSE {columns[0:]}: " f"{days[0]}: [SHOP B PRODUCTS]")
             if(SHOP_A > SHOP_C):
                 if(SHOP_C == 0):
-                    print(days[1] + ": [SHOP A PRODUCTS]")
-                else: print(days[1] + ": [SHOP C PRODUCTS]")
+                    print(f"{days[1]}: [SHOP A PRODUCTS]")
+                else: print(f"{days[1]}: [SHOP C PRODUCTS]")
         if(SHOP_B > SHOP_A or SHOP_A > SHOP_B):
-            print(f"DELIVERY DAY FOR HOUSE {columns[0:]}: " f"{days[0]} : [SHOP B PRODUCTS]")
+            print(f"DELIVERY DAY FOR HOUSE {columns[0:]}: " f"{days[0]}: [SHOP B PRODUCTS]")
             if(SHOP_A > SHOP_B):
                 if(SHOP_B == 0):
                     print(f"{days[1]}: [SHOP A PRODUCTS]")
