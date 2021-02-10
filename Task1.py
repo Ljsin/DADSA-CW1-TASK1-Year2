@@ -53,7 +53,7 @@ days = ['MONDAY',
 
 #FUNCTION: Week_stock
 #PARAM: NONE
-#DESC: Splits stock list into three individual lists from each store A, B and C 
+#DESC: Splits stock list into three individual lists from stores A, B and C 
 #RETURNS: list - Week_stock
 def Week_stock():
     
