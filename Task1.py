@@ -57,7 +57,7 @@ days = ['MONDAY',
 #RETURNS: list - Week_stock
 def Week_stock():
     
-    with open("CW1/DADSA CWK SHOPPING DATA WEEK 1 File A.csv", newline='') as csvfile:
+    with open("DADSA CWK SHOPPING DATA WEEK 1 File A.csv", newline='') as csvfile:
         csv_reader = csv.reader(csvfile)
         #DEFINED AS A GLOBAL TO BE USED INSIDE AND OUTSIDE THIS FUNCTION 
         global store_stock_list 
@@ -73,7 +73,7 @@ def Week_stock():
                 SHOP_C.append(store_stock_list[column][0] + store_stock_list[column][1])
             # APPENDING EACH SHOP WITH THE STOCK LIST BY COLUMN AND INDEX OF 1 
         
-    with open("CW1/DATA CWK SHOPPING DATA WEEK 1 FILE B.csv", newline='') as csvfile:
+    with open("DATA CWK SHOPPING DATA WEEK 1 FILE B.csv", newline='') as csvfile:
         csv_reader = csv.reader(csvfile)
         house_shop_list = list(csv_reader)
     return house_shop_list
